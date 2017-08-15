@@ -43,7 +43,7 @@ div {
 
 
 .planetBox {
-	border: 1px solid pink;
+	border: 1px solid #d934d3;
 	height: 300px;
 	width: 300px;
 	display: inline-block;
@@ -52,8 +52,9 @@ div {
 
 .planetName {
 	text-align: center;
+	text-shadow: 1px 1px 2px #d934d3;
 	position: absolute;
-    font-size: 40px;
+    font-size: 45px;
     color: white;
     margin-top: 169px;
     width: inherit;
