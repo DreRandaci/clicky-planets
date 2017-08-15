@@ -56,21 +56,16 @@ function showMe(e) {
 };
 
 document.body.addEventListener('click', function(event){
-  // console.log("click event", event)
-  // console.log("click event", event.target.parentNode.parentNode.parentNode);
   if(event.target.className === 'planetImage') {
-    // console.log('Holy shit batman!!!')
     showMe(event);
   };
 });
 
 inputField.addEventListener('keypress', function(event){
-  // console.log('event', event.key)
   if (event.key === 'Enter') {
     let txt = inputField.value;
     //1. filter planets array
     let results = planets.filter(function(thing) {
-      // console.log('Filter thing', thing);
       return thing.name.indexOf(txt) > -1;
     });
     //2. rerun domString
