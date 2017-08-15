@@ -1,3 +1,4 @@
+// debugger;
 let planets = [{
   name: 'mercury',
   url: 'https://www.nasa.gov/sites/default/files/mercury_1.jpg'
@@ -26,28 +27,60 @@ let planets = [{
 
 let planetHolderDiv = document.getElementById('planetHolder');
 let getPlanetsButton = document.getElementById('showButton');
+let inputField = document.getElementById('inputField');
+let clearButton = document.getElementById('clearButton');
 
-function domString() {
+function domString(planetz) {
   let planetString = '';
-  for (let i = 0; i < planets.length; i++) {
+  for (let i = 0; i < planetz.length; i++) {
     let newPlanet = '';
     newPlanet += `<div class="planetBox" id="planetBox-${i}">`;
-    newPlanet += `<div class="planetName">${planets[i].name}</div>`;
-    newPlanet += `<img class="planetImage" src="${planets[i].url}">`;
+    newPlanet += `<div class="planetName hidden">${planetz[i].name}</div>`;
+    newPlanet += `<img class="planetImage" src="${planetz[i].url}">`;
     newPlanet += `</div>`;
     planetString += newPlanet;
   };
-  writeToDom(planetString)
+  writeToDom(planetString);
 };
 
 function writeToDom(string) {
   planetHolderDiv.innerHTML = string;
 };
 
-getPlanetsButton.addEventListener('mouseenter', domString);
+getPlanetsButton.addEventListener('mouseenter', function(){
+  domString(planets)
+});
 
+function showMe(e) {
+  e.target.previousSibling.classList.remove('hidden');
+};
 
+document.body.addEventListener('click', function(event){
+  // console.log("click event", event)
+  // console.log("click event", event.target.parentNode.parentNode.parentNode);
+  if(event.target.className === 'planetImage') {
+    // console.log('Holy shit batman!!!')
+    showMe(event);
+  };
+});
 
+inputField.addEventListener('keypress', function(event){
+  // console.log('event', event.key)
+  if (event.key === 'Enter') {
+    let txt = inputField.value;
+    //1. filter planets array
+    let results = planets.filter(function(thing) {
+      // console.log('Filter thing', thing);
+      return thing.name.indexOf(txt) > -1;
+    });
+    //2. rerun domString
+    domString(results);
+  };
+});
+
+clearButton.addEventListener('click', function() {
+  inputField.value = '';
+});
 
 
 
