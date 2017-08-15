@@ -5,3 +5,88 @@ body {
 h1 {
 	color: pink;
 }
+
+div {
+	color: pink;
+}
+
+.btn {
+  background: #d934d3;
+  background-image: -webkit-linear-gradient(top, #d934d3, #5c2bb8);
+  background-image: -moz-linear-gradient(top, #d934d3, #5c2bb8);
+  background-image: -ms-linear-gradient(top, #d934d3, #5c2bb8);
+  background-image: -o-linear-gradient(top, #d934d3, #5c2bb8);
+  background-image: linear-gradient(to bottom, #d934d3, #5c2bb8);
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  text-shadow: 4px 4px 8px #666666;
+  -webkit-box-shadow: 0px 1px 3px #ff00ff;
+  -moz-box-shadow: 0px 1px 3px #ff00ff;
+  box-shadow: 0px 1px 3px #ff00ff;
+  font-family: Georgia;
+  color: #ffffff;
+  font-size: 24px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #5c2bb8;
+  background-image: -webkit-linear-gradient(top, #5c2bb8, #d934d3);
+  background-image: -moz-linear-gradient(top, #5c2bb8, #d934d3);
+  background-image: -ms-linear-gradient(top, #5c2bb8, #d934d3);
+  background-image: -o-linear-gradient(top, #5c2bb8, #d934d3);
+  background-image: linear-gradient(to bottom, #5c2bb8, #d934d3);
+  text-decoration: none;
+}
+
+
+.planetBox {
+	border: 1px solid pink;
+	height: 300px;
+	width: 300px;
+	display: inline-block;
+    margin: 20px;
+}
+
+.planetName {
+	text-align: center;
+	position: absolute;
+    font-size: 40px;
+    color: white;
+    margin-top: 169px;
+    width: inherit;
+}
+
+.planetImage {
+	height: 300px;
+	width: 300px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
