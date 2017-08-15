@@ -25,6 +25,7 @@ let planets = [{
 }];
 
 let planetHolderDiv = document.getElementById('planetHolder');
+let getPlanetsButton = document.getElementById('showButton');
 
 function domString() {
   let planetString = '';
@@ -35,17 +36,15 @@ function domString() {
     newPlanet += `<img class="planetImage" src="${planets[i].url}">`;
     newPlanet += `</div>`;
     planetString += newPlanet;
-
   };
   writeToDom(planetString)
-  // console.log(planetString)
 };
 
 function writeToDom(string) {
   planetHolderDiv.innerHTML = string;
 };
 
-domString();
+getPlanetsButton.addEventListener('mouseenter', domString);
 
 
 
